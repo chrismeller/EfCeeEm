@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\EfCeeEmSharp.Board.Consumers\EfCeeEmSharp.Board.Consumers.csproj" />
+      <ProjectReference Include="..\EfCeeEmSharp.Board.Contracts\EfCeeEmSharp.Board.Contracts.csproj" />
     </ItemGroup>
 
 </Project>

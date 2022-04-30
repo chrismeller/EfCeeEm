@@ -1,8 +1,10 @@
+using System.Net.Http.Json;
+using EfCeeEmSharp.Board.Consumer.DTOs;
 using EfCeeEmSharp.Board.Contracts;
 using MassTransit;
 using Microsoft.Extensions.Logging;
 
-namespace EfCeeEmSharp.Board.Consumers;
+namespace EfCeeEmSharp.Board.Consumer;
 
 public class GetBoardsConsumer : IConsumer<GetBoards>
 {
@@ -13,9 +15,11 @@ public class GetBoardsConsumer : IConsumer<GetBoards>
         _logger = logger;
     }
 
-    public Task Consume(ConsumeContext<GetBoards> context)
+    public async Task Consume(ConsumeContext<GetBoards> context)
     {
-        _logger.LogInformation("Received GetBoards");
-        return Task.CompletedTask;
+        _logger.LogDebug("Received GetBoards");
+
+        using var http = new HttpClient();
+        var response = await http.GetFromJsonAsync<BoardsResponse>("https://a.4cdn.org/boards.json");
     }
 }
