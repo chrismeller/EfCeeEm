@@ -9,16 +9,14 @@
 
     <ItemGroup>
       <ProjectReference Include="..\EfCeeEmSharp.Board.Contracts\EfCeeEmSharp.Board.Contracts.csproj" />
+      <ProjectReference Include="..\EfCeeEmSharp.Client\EfCeeEmSharp.Client.csproj" />
+      <ProjectReference Include="..\EfCeeEmSharp.Config\EfCeeEmSharp.Config.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="MassTransit" Version="8.0.2" />
       <PackageReference Include="MassTransit.Abstractions" Version="8.0.2" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="DTOs\" />
     </ItemGroup>
 
 </Project>

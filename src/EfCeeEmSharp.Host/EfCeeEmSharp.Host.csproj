@@ -18,6 +18,14 @@
     <ItemGroup>
       <ProjectReference Include="..\EfCeeEmSharp.Board.Consumers\EfCeeEmSharp.Board.Consumers.csproj" />
       <ProjectReference Include="..\EfCeeEmSharp.Board.Contracts\EfCeeEmSharp.Board.Contracts.csproj" />
+      <ProjectReference Include="..\EfCeeEmSharp.Client\EfCeeEmSharp.Client.csproj" />
+      <ProjectReference Include="..\EfCeeEmSharp.Config\EfCeeEmSharp.Config.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

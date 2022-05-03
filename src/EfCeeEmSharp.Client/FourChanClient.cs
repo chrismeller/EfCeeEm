@@ -94,6 +94,12 @@ public class FourChanClient : IDisposable
         };
     }
 
+    public async Task<bool> GetThreadPostsHasChanged(string board, long threadNumber, string? etag = null,
+        DateTimeOffset? lastModified = null)
+    {
+        return await HasChanged($"/{board}/thread/{threadNumber}.json", etag, lastModified);
+    }
+
     public async Task<ApiResponse<IEnumerable<ThreadPost>>> GetThreadPosts(string board, long threadNumber)
     {
         var request = new HttpRequestMessage(HttpMethod.Get, $"/{board}/thread/{threadNumber}.json");

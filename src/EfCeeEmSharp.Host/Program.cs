@@ -2,6 +2,8 @@
 
 using System.Reflection;
 using EfCeeEmSharp.Board.Consumer;
+using EfCeeEmSharp.Client;
+using EfCeeEmSharp.Config;
 using EfCeeEmSharp.Host;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +13,8 @@ await Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
         services.Configure<AppSettings>(hostContext.Configuration.GetSection("App"));
+
+        services.AddSingleton<FourChanClient>();
 
         services.AddMassTransit(x =>
         {
