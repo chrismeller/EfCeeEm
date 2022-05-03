@@ -1,5 +1,4 @@
 using System.Net.Http.Json;
-using EfCeeEmSharp.Board.Consumer.DTOs;
 using EfCeeEmSharp.Board.Contracts;
 using MassTransit;
 using Microsoft.Extensions.Logging;
@@ -18,8 +17,5 @@ public class GetBoardsConsumer : IConsumer<GetBoards>
     public async Task Consume(ConsumeContext<GetBoards> context)
     {
         _logger.LogDebug("Received GetBoards");
-
-        using var http = new HttpClient();
-        var response = await http.GetFromJsonAsync<BoardsResponse>("https://a.4cdn.org/boards.json");
     }
 }
