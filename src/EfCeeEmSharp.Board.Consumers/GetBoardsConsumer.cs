@@ -35,7 +35,7 @@ public class GetBoardsConsumer : IConsumer<GetBoards>
 
         foreach (var board in boardsToRun)
         {
-            // await context.Send();
+            await context.Send(new GetThreads(board));
         }
 
         _logger.LogDebug("Completed GetBoards");
