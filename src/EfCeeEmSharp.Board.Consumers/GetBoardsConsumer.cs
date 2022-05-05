@@ -1,7 +1,7 @@
-using System.Net.Http.Json;
 using EfCeeEmSharp.Board.Contracts;
 using EfCeeEmSharp.Client;
 using EfCeeEmSharp.Config;
+using EfCeeEmSharp.Thread.Contracts;
 using MassTransit;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -25,25 +25,19 @@ public class GetBoardsConsumer : IConsumer<GetBoards>
     {
         _logger.LogDebug("Received GetBoards");
 
-        var boardsToRun = "";
-        if (!string.IsNullOrEmpty(_options.Value.BoardsToRun))
-        {
-            boardsToRun = _options.Value.BoardsToRun;
-        }
-        else
-        {
-            // note that this is very bad. there's no reason to re-poll every time we start
-            // but there's no point in storing this somewhere - you should just be specifying the list!
-            var boards = await _client.GetBoards();
 
-            boardsToRun = String.Join(",", boards.Data.Select(x => x.Name));
+        if (string.IsNullOrEmpty(_options.Value.BoardsToRun))
+        {
+            throw new Exception("No boards were specified to run. Update your config!");
         }
 
-        foreach (var board in boardsToRun.Split(","))
+        var boardsToRun = _options.Value.BoardsToRun.Split(',');
+
+        foreach (var board in boardsToRun)
         {
             // await context.Send();
         }
-        
+
         _logger.LogDebug("Completed GetBoards");
     }
 }
