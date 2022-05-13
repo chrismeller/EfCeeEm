@@ -5,6 +5,7 @@ using EfCeeEmSharp.Board.Consumer;
 using EfCeeEmSharp.Client;
 using EfCeeEmSharp.Config;
 using EfCeeEmSharp.Host;
+using EfCeeEmSharp.Thread.Consumers;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,6 +32,7 @@ await Host.CreateDefaultBuilder(args)
             x.AddActivities(entryAssembly);
 
             x.AddConsumers(typeof(GetBoardsConsumer).Assembly);
+            x.AddConsumers(typeof(GetThreadsConsumer).Assembly);
 
             x.UsingRabbitMq((context, cfg) =>
             {

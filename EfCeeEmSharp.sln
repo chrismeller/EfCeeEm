@@ -17,21 +17,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCeeEmSharp.Board.Consumer
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{944902CE-D7BC-4579-B3AE-D32BC4DC6D43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCeeEmSharp.Client", "src\EfCeeEmSharp.Client\EfCeeEmSharp.Client.csproj", "{C11BE094-EA4D-455D-A0BD-422ADC6E6461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCeeEmSharp.Client", "src\EfCeeEmSharp.Client\EfCeeEmSharp.Client.csproj", "{C11BE094-EA4D-455D-A0BD-422ADC6E6461}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCeeEmSharp.Client.Test", "src\EfCeeEmSharp.Client.Test\EfCeeEmSharp.Client.Test.csproj", "{D3F397EA-2E69-4E1A-92AF-B39DFB567AD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCeeEmSharp.Config", "src\EfCeeEmSharp.Config\EfCeeEmSharp.Config.csproj", "{CDEC2E51-5D57-4740-B8AA-70C919443BCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCeeEmSharp.Config", "src\EfCeeEmSharp.Config\EfCeeEmSharp.Config.csproj", "{CDEC2E51-5D57-4740-B8AA-70C919443BCE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thread", "Thread", "{8BDE793A-7056-48BB-BBC3-071DB218EF9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCeeEmSharp.Thread.Contracts", "src\EfCeeEmSharp.Thread.Contracts\EfCeeEmSharp.Thread.Contracts.csproj", "{26E1D6B9-0510-458F-B269-8759AE34BCB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCeeEmSharp.Thread.Contracts", "src\EfCeeEmSharp.Thread.Contracts\EfCeeEmSharp.Thread.Contracts.csproj", "{26E1D6B9-0510-458F-B269-8759AE34BCB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCeeEmSharp.Thread.Consumers", "src\EfCeeEmSharp.Thread.Consumers\EfCeeEmSharp.Thread.Consumers.csproj", "{80B741D3-67B9-45A1-96E7-67D977DBC9FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCeeEmSharp.Thread.Consumers", "src\EfCeeEmSharp.Thread.Consumers\EfCeeEmSharp.Thread.Consumers.csproj", "{80B741D3-67B9-45A1-96E7-67D977DBC9FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCeeEmSharp.Thread.Data", "src\EfCeeEmSharp.Thread.Data\EfCeeEmSharp.Thread.Data.csproj", "{61144DFF-24E5-4CC3-9B2D-596D46A0E371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCeeEmSharp.Thread.Data", "src\EfCeeEmSharp.Thread.Data\EfCeeEmSharp.Thread.Data.csproj", "{61144DFF-24E5-4CC3-9B2D-596D46A0E371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCeeEmSharp.Thread.Models", "src\EfCeeEmSharp.Thread.Models\EfCeeEmSharp.Thread.Models.csproj", "{EB608F3C-C536-48D5-8090-34A33C12BDD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCeeEmSharp.Thread.Models", "src\EfCeeEmSharp.Thread.Models\EfCeeEmSharp.Thread.Models.csproj", "{EB608F3C-C536-48D5-8090-34A33C12BDD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCeeEmSharp.Board.Tests", "src\EfCeeEmSharp.Board.Tests\EfCeeEmSharp.Board.Tests.csproj", "{357ADA9D-BC46-4B6D-A1ED-D152BB19DC37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{EB608F3C-C536-48D5-8090-34A33C12BDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB608F3C-C536-48D5-8090-34A33C12BDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB608F3C-C536-48D5-8090-34A33C12BDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357ADA9D-BC46-4B6D-A1ED-D152BB19DC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357ADA9D-BC46-4B6D-A1ED-D152BB19DC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357ADA9D-BC46-4B6D-A1ED-D152BB19DC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357ADA9D-BC46-4B6D-A1ED-D152BB19DC37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{80B741D3-67B9-45A1-96E7-67D977DBC9FA} = {8BDE793A-7056-48BB-BBC3-071DB218EF9F}
 		{61144DFF-24E5-4CC3-9B2D-596D46A0E371} = {8BDE793A-7056-48BB-BBC3-071DB218EF9F}
 		{EB608F3C-C536-48D5-8090-34A33C12BDD7} = {8BDE793A-7056-48BB-BBC3-071DB218EF9F}
+		{357ADA9D-BC46-4B6D-A1ED-D152BB19DC37} = {8D34EB48-B59A-42F4-8814-D88B7749B8BE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AF22BBC-7751-46D9-8B77-ACA0EB77EFBD}

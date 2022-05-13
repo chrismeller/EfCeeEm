@@ -20,6 +20,7 @@
       <ProjectReference Include="..\EfCeeEmSharp.Board.Contracts\EfCeeEmSharp.Board.Contracts.csproj" />
       <ProjectReference Include="..\EfCeeEmSharp.Client\EfCeeEmSharp.Client.csproj" />
       <ProjectReference Include="..\EfCeeEmSharp.Config\EfCeeEmSharp.Config.csproj" />
+      <ProjectReference Include="..\EfCeeEmSharp.Thread.Consumers\EfCeeEmSharp.Thread.Consumers.csproj" />
     </ItemGroup>
 
     <ItemGroup>
