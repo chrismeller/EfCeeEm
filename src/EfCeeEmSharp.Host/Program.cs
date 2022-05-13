@@ -8,6 +8,7 @@ using EfCeeEmSharp.Host;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 await Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
@@ -33,10 +34,12 @@ await Host.CreateDefaultBuilder(args)
 
             x.UsingRabbitMq((context, cfg) =>
             {
-                cfg.Host("localhost", "/", h =>
+                var config = context.GetRequiredService<IOptions<AppSettings>>();
+
+                cfg.Host(config.Value.RabbitMq.Hostname, config.Value.RabbitMq.Vhost, h =>
                 {
-                    h.Username("admin");
-                    h.Password("password");
+                    h.Username(config.Value.RabbitMq.Username);
+                    h.Password(config.Value.RabbitMq.Password);
                 });
 
                 cfg.ConfigureEndpoints(context);
