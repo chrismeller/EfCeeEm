@@ -17,7 +17,7 @@ public class App : BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            await _bus.Publish(new GetBoards(), stoppingToken);
+            await _bus.Publish<GetBoards>(new {}, stoppingToken);
 
             await Task.Delay(1000, stoppingToken);
         }
