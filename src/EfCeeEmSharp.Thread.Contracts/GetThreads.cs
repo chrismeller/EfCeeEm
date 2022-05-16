@@ -1,3 +1,6 @@
 ﻿namespace EfCeeEmSharp.Thread.Contracts;
 
-public record GetThreads(string Board);
+public interface GetThreads
+{
+    public string Board { get; }
+};
