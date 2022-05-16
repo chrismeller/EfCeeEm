@@ -6,7 +6,12 @@ using EfCeeEmSharp.Client;
 using EfCeeEmSharp.Config;
 using EfCeeEmSharp.Host;
 using EfCeeEmSharp.Thread.Consumers;
+using EfCeeEmSharp.Thread.Contracts;
+using EfCeeEmSharp.Thread.Data;
+using EfCeeEmSharp.Thread.Domain;
 using MassTransit;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
@@ -17,6 +22,12 @@ await Host.CreateDefaultBuilder(args)
         services.Configure<AppSettings>(hostContext.Configuration.GetSection("App"));
 
         services.AddSingleton<FourChanClient>();
+
+        // @todo move this to a module
+        services.AddTransient<IThreadQueryService, ThreadQueryService>();
+        services.AddDbContext<ThreadDbContext>(options =>
+                options.UseSqlServer(hostContext.Configuration.GetConnectionString("ThreadDbContext")),
+            ServiceLifetime.Transient);
 
         services.AddMassTransit(x =>
         {
