@@ -16,6 +16,7 @@
     <ItemGroup>
       <ProjectReference Include="..\EfCeeEmSharp.Client\EfCeeEmSharp.Client.csproj" />
       <ProjectReference Include="..\EfCeeEmSharp.Config\EfCeeEmSharp.Config.csproj" />
+      <ProjectReference Include="..\EfCeeEmSharp.Post.Contracts\EfCeeEmSharp.Post.Contracts.csproj" />
       <ProjectReference Include="..\EfCeeEmSharp.Thread.Contracts\EfCeeEmSharp.Thread.Contracts.csproj" />
     </ItemGroup>
 
