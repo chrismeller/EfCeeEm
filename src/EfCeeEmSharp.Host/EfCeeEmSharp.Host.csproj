@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MassTransit" Version="8.5.8" />
+      <PackageReference Include="MassTransit" Version="8.5.9" />
       <PackageReference Include="MassTransit.EntityFrameworkCore" Version="8.5.8" />
       <PackageReference Include="MassTransit.RabbitMq" Version="8.5.8" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.36" />
